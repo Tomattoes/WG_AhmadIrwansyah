@@ -9,9 +9,12 @@ $id = $_GET['id'];
         include 'koneksi.php';
         $sql = mysqli_query($koneksi, "SELECT * FROM foto WHERE FotoID='$id'");
         $data = mysqli_fetch_array($sql); {
+            $file_path = $data['LokasiFile'] . $data['Foto'];
         ?>
             <div class="col-md-4">
-                <img src="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" class="img-fluid rounded-start" alt="...">
+                <a href="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" data-lightbox="image-1">
+                    <img src="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" class="img-fluid rounded-start" alt="...">
+                </a>
             </div>
             <div class="col-md-8">
                 <form action="comment.php" method="post">
@@ -34,8 +37,21 @@ $id = $_GET['id'];
                                         <i class="bi bi-list"></i>
                                     </a>
                                     <ul class="dropdown-menu text-small">
-                                        <li><a class="dropdown-item" href="unduh.php?id=<?= $data['FotoID']; ?>"><i class="bi bi-download"></i> unduh</a></li>
-                                        <li><a class="dropdown-item" href="save.php?id=<?= $data['FotoID']; ?>&user=<?= $_SESSION['UserID']; ?>"><i class="bi bi-bookmark"></i> simpan</a></li>
+                                        <li><a class="dropdown-item" href="<?= $file_path; ?>" download><i class="bi bi-download"></i> unduh</a></li>
+                                        <?php
+                                        $id = $_GET['id'];
+                                        $user = $_SESSION['UserID'];
+                                        $ss = mysqli_query($koneksi, "SELECT * FROM save WHERE FotoID=$id and UserID=$user");
+                                        $dd = mysqli_num_rows($ss);
+                                        if ($dd > 0) { ?>
+                                            <li><a class="dropdown-item" href="unsave.php?id=<?= $data['FotoID']; ?>&user=<?= $_SESSION['UserID']; ?>"><i class="bi bi-bookmark-fill" style="color: yellow;"></i> simpan</a></li>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <li><a class="dropdown-item" href="save.php?id=<?= $data['FotoID']; ?>&user=<?= $_SESSION['UserID']; ?>"><i class="bi bi-bookmark"></i> simpan</a></li>
+                                        <?php
+                                        }
+                                        ?>
                                         <li><a class="dropdown-item" href="ViewComment.php?id=<?= $data['FotoID']; ?>"><i class="bi bi-chat-dots"></i> lihat semua komentar</a></li>
                                     </ul>
                                 </div>
@@ -55,14 +71,16 @@ $id = $_GET['id'];
                             <?php
                             } else {
                             ?>
-                                <a href="like.php?id=<?= $id; ?>&user=<?= $user; ?>" type="button" class="btn btn-outline-secondary" id="button-addon2"><i class="bi bi-heart"></i></a>
-                            <?php } ?>
+                                <a href="like.php?id=<?= $id; ?>&user=<?= $user; ?>" type="button" class="btn btn-outline-secondary" id="button-addon2"><i class="bi bi-heart"></i>
+                                </a>
+                            <?php
+                            }
+                            ?>
                             <input type="text" name="komentar" class="form-control" placeholder="type comment here" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <input type="hidden" name="user" value="<?= $user ?>" class="form-control" placeholder="type comment here" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="type comment here" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="bi bi-send"></i></button>
                         </div>
-                        <!-- scroll -->
 
                     </div>
                 </form>

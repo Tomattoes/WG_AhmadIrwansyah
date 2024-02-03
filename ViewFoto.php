@@ -12,7 +12,9 @@ $id = $_GET['id'];
         $data = mysqli_fetch_array($sql); {
         ?>
             <div class="col-md-4">
-                <img src="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" class="img-fluid rounded-start" alt="...">
+                <a href="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" data-lightbox="image-1">
+                    <img src="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" class="img-fluid rounded-start" alt="...">
+                </a>
             </div>
             <div class="col-md-8">
                 <div class="card-body">

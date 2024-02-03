@@ -12,7 +12,7 @@
     </div>
 </footer>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="lightbox2-dev/dist/js/lightbox-plus-jquery.js"></script>
 </body>
 
 </html>

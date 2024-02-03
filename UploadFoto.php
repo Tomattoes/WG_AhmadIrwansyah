@@ -20,10 +20,12 @@ include 'layout/header.php';
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Masukan ke Album</label>
-            <select name="album" id="exampleInputPassword1" class="form-control" required>
+            <select name="album" id="exampleInputPassword1" class="form-control">
+                <option value=""> -- Pilih Album -- </option>
                 <?php
                 include 'koneksi.php';
-                $sql = mysqli_query($koneksi, "SELECT * FROM album");
+                $user = $_SESSION['UserID'];
+                $sql = mysqli_query($koneksi, "SELECT * FROM album WHERE UserID='$user'");
                 while ($data = mysqli_fetch_array($sql)) { ?>
                     <option value="<?= $data['AlbumID'] ?>"><?= $data['NamaAlbum'] ?></option>
                 <?php

@@ -17,10 +17,11 @@ if ($_SESSION['UserID'] == "") {
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>T-link - Home</title>
+    <title>T-link</title>
 
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="lightbox2-dev/dist/css/lightbox.css">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;

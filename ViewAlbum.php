@@ -14,6 +14,7 @@ $id = $_GET['id'];
             ?>
                 <h1 class="fw-light"><?= $data['NamaAlbum'] ?></h1>
                 <p class="lead text-body-secondary"><?= $data['Deskripsi'] ?>.</p>
+                <a href="AddFoto.php?id=<?= $data['AlbumID'] ?>" class="btn btn-primary">Tambahkan Foto Ke Album <b><?= $data['NamaAlbum'] ?></b></a>
             <?php } ?>
         </div>
     </div>
@@ -29,7 +30,7 @@ $id = $_GET['id'];
         <div class="col">
             <div class="card shadow-sm">
                 <a href="ViewFoto.php?id=<?= $data['FotoID'] ?>">
-                    <img src="<?= $data['LokasiFile'] ?><?= $data['Foto'] ?>" class="img-fluid rounded-start" alt="..." width="200px">
+                    <img src="<?= $data['LokasiFile'] ?><?= $data['Foto'] ?>" class="img-fluid rounded-start" alt="..." width="300px">
                 </a>
             </div>
         </div>
