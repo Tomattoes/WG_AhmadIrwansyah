@@ -166,36 +166,38 @@ if ($_SESSION['UserID'] == "") {
     </div>
 
 
-    <header class="p-3 mb-3 border-bottom">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-body-emphasis"><strong>T-link</strong></a></li>
-                    <li><a href="home.php" class="nav-link px-2 link-body-emphasis">Home</a></li>
-                    <!-- <li><a href="explore.php" class="nav-link px-2 link-body-emphasis">Explore</a></li> -->
-                    <li><a href="create.php" class="nav-link px-2 link-body-emphasis">Create</a></li>
-                    <li><a href="foto.php" class="nav-link px-2 link-body-emphasis">Foto</a></li>
-                </ul>
-
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="assets/file/IMG-20240115-WA0033.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+    <header class="border-bottom fixed-top" data-bs-theme="dark">
+        <div class="p-3 text-bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
                     </a>
-                    <ul class="dropdown-menu text-small">
-                        <li><a class="dropdown-item" href="UploadFoto.php"><i class="bi bi-plus"></i> foto</a></li>
-                        <li><a class="dropdown-item" href="CreateAlbum.php"><i class="bi bi-images"></i> album</a></li>
-                        <li><a class="dropdown-item" href="profile.php"><i class="bi bi-people"></i> profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="sign-out.php" onclick="return confirm('Apakah Anda yakin ingin keluar?');"><i class="bi bi-box-arrow-right"></i> Sign out</a></li>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 link-body-emphasis"><strong>T-link</strong></a></li>
+                        <li><a href="home.php" class="nav-link px-2 link-body-emphasis">Home</a></li>
+                        <!-- <li><a href="explore.php" class="nav-link px-2 link-body-emphasis">Explore</a></li> -->
+                        <li><a href="create.php" class="nav-link px-2 link-body-emphasis">Create</a></li>
+                        <li><a href="foto.php" class="nav-link px-2 link-body-emphasis">Foto</a></li>
                     </ul>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/file/IMG-20240115-WA0033.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small">
+                            <li><a class="dropdown-item" href="UploadFoto.php"><i class="bi bi-plus"></i> foto</a></li>
+                            <li><a class="dropdown-item" href="CreateAlbum.php"><i class="bi bi-images"></i> album</a></li>
+                            <li><a class="dropdown-item" href="profile.php"><i class="bi bi-people"></i> profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="sign-out.php" onclick="return confirm('Apakah Anda yakin ingin keluar?');"><i class="bi bi-box-arrow-right"></i> Sign out</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

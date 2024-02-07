@@ -6,12 +6,16 @@ include 'layout/header.php';
 <main>
     <div class="album bg-body-tertiary">
         <div class="container">
-            <h1 class="fw-light text-center">Foto</h1>
-            <div class="text-center">
-                <p>
-                    <a href="CreateAlbum.php" class="btn btn-primary my-2">Buat Album</a>
-                    <a href="UploadFoto.php" class="btn btn-secondary my-2">Upload Foto</a>
-                </p>
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light text-center">Foto</h1>
+                    <div class="text-center">
+                        <p>
+                            <a href="CreateAlbum.php" class="btn btn-primary my-2">Buat Album</a>
+                            <a href="UploadFoto.php" class="btn btn-secondary my-2">Upload Foto</a>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
