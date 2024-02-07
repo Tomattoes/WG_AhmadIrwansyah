@@ -25,7 +25,9 @@ include 'layout/header.php';
                         while ($data = mysqli_fetch_array($sql)) { ?>
                             <div class="col">
                                 <div class="card shadow-sm">
-                                    <img src="<?= $data['LokasiFile'] ?><?= $data['Foto'] ?>" alt="" width="100%" height="225px">
+                                    <a href="ViewFoto.php?id=<?= $data['FotoID'] ?>">
+                                        <img src="<?= $data['LokasiFile'] ?><?= $data['Foto'] ?>" alt="" width="100%" height="225px">
+                                    </a>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
