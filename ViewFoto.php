@@ -2,8 +2,8 @@
 include 'layout/header.php';
 $id = $_GET['id'];
 ?>
-<main class="py-5">
-    <div class="card mb-3">
+<main class="py-5 mt-3">
+    <div class="card mb-3 mt-5">
         <div class="row">
             <?php
             include 'koneksi.php';

@@ -2,8 +2,8 @@
 include 'layout/header.php';
 ?>
 
-<div class="row py-lg-5">
-    <div class="col-6">
+<div class="row py-lg-5 p-3 mt-5">
+    <div class="col-6 mt-5">
         <div class="card">
             <div class="card-header">
                 <h3>Profil Saat Ini</h3>
@@ -35,7 +35,7 @@ include 'layout/header.php';
             <?php } ?>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-6 mt-5">
         <div class="card">
             <div class="card-header">
                 <h3>Edit Profil</h3>

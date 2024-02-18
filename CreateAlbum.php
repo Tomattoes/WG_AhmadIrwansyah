@@ -2,8 +2,8 @@
 include 'layout/header.php';
 ?>
 
-<div class="row py-lg-5">
-    <div class="col">
+<div class="row py-lg-5 py-5 p-5 mt-5">
+    <div class="col mt-5">
         <div class="card">
             <form class="form-control" action="aksi.php" method="post">
                 <div class="mb-3">

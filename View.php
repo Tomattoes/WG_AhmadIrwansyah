@@ -3,8 +3,8 @@ include 'layout/header.php';
 $id = $_GET['id'];
 ?>
 
-<div class="py-5">
-    <div class="card mb-3">
+<div class="py-5 mt-3">
+    <div class="card mb-3 mt-5">
         <div class="row">
             <?php
             include 'koneksi.php';
@@ -14,7 +14,7 @@ $id = $_GET['id'];
                 $foto = $data['FotoID'];
             ?>
                 <div class="col-md-6">
-                    <a href="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" data-lightbox="image-1">
+                    <a href="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" data-lightbox="image-1"> 
                         <img src="<?= $data['LokasiFile']; ?><?= $data['Foto']; ?>" class="img-fluid rounded-start" alt="...">
                     </a>
                 </div>
@@ -25,9 +25,8 @@ $id = $_GET['id'];
                                 <div class="col-6 mb-3">
                                     <?php
                                     include 'koneksi.php';
-                                    $id = $_SESSION['UserID'];
                                     $s = mysqli_query($koneksi, "SELECT user.Username
-                                FROM user INNER JOIN foto ON foto.UserID=user.UserID where user.UserID=$id");
+                                FROM user INNER JOIN foto ON foto.UserID=user.UserID where foto.FotoID=$id");
                                     $d = mysqli_fetch_array($s); {
                                     ?>
                                         <img src="assets/file/IMG-20240115-WA0033.jpg" alt="" class="rounded-circle" width="25px">
@@ -60,10 +59,10 @@ $id = $_GET['id'];
                                     </div>
                                 </div>
                             </div>
+                            <h5 class="card-title text-body-secondary"><?= $data['JudulFoto'] ?></h5>
+                            <p class="card-text"><?= $data['Deskripsi'] ?>.</p>
+                            <p class="text-body-secondary text-sm-end m-3"><?= $data['TanggalUnggah'] ?></p>
                         </div>
-                        <h5 class="card-title text-body-secondary"><?= $data['JudulFoto'] ?></h5>
-                        <p class="card-text"><?= $data['Deskripsi'] ?>.</p>
-                        <p class="text-body-secondary text-sm-end m-3"><?= $data['TanggalUnggah'] ?></p>
                         <div class="input-group mb-3 p-4">
                             <?php
                             $id = $_GET['id'];

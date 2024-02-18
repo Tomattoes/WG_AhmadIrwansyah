@@ -2,8 +2,8 @@
 include 'layout/header.php';
 
 ?>
-<div class="row py-lg-5">
-    <div class="col">
+<div class="row py-lg-5 p-5 mt-5">
+    <div class="col mt-4">
 
         <main>
 

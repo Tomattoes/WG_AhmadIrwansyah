@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="en" data-bs-theme="auto">
 
 <head>
     <script src="assets/js/color-modes.js"></script>
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>T-link - Landing Page</title>
+    <title>T-ink - Sign-Up</title>
 
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -94,10 +94,10 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/cover.css" rel="stylesheet">
+    <link href="assets/css/sign-in.css" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center text-bg-dark">
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
@@ -159,30 +159,25 @@
     </div>
 
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto bg">
-            <div>
-                <h3 class="float-md-start mb-0">T-link</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="index.php">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="sign-in.php">Sign In</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="sign-up1.php">Sign Up</a>
-                </nav>
+    <main class="form-signin w-100 m-auto">
+        <form method="post" action="sign-up2.php" class="text-center">
+            <!-- <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+            <h1 class="h3 mb-3 fw-normal">sign up - 1</h1>
+
+            <div class="form-floating">
+                <input type="email" name="email" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Email</label>
             </div>
-        </header>
+            <div class="form-floating">
+                <input type="password" name="password" class="form-control" id="floatingPassword" required>
+                <label for="floatingPassword">Password</label>
+            </div>
+            <button class="btn btn-primary w-100 py-2 mt-3" type="submit" name="kirim">next</button>
+            <a class="mt-5 mb-3 text-body-secondary" href="sign-in.php">Have any account?</a>
+            <p class="mt-5 mb-3 text-body-secondary">T-link &copy; 2024</p>
+        </form>
+    </main>
 
-        <main class="px-3">
-            <h1>T-link</h1>
-            <p class="lead">Hubungkan semua cerita dan momen-momen berharga ada di <b>Thread Link</b> menjadi sebuah kenangan.</p>
-            <!-- <p class="lead">
-                <a href="home.php" class="btn btn-lg btn-light fw-bold border-white bg-white">Xplore</a>
-            </p> -->
-        </main>
-
-        <footer class="mt-auto text-white-50">
-            <p>Thread Link <a href="https://github.com/Tomattoes" class="text-white">Tomattoes</a> V 1.0.</p>
-        </footer>
-    </div>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

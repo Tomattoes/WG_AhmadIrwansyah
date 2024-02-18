@@ -6,8 +6,8 @@ include 'layout/header.php';
 <main>
     <div class="album bg-body-tertiary">
         <div class="container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
+            <div class="row py-lg-5 p-5 mt-5">
+                <div class="col-lg-6 col-md-8 mx-auto mt-4">
                     <h1 class="fw-light text-center">Foto</h1>
                     <div class="text-center">
                         <p>

@@ -3,8 +3,8 @@ include 'layout/header.php';
 $id = $_GET['id'];
 ?>
 
-<main class="py-5">
-    <div class="card">
+<main class="py-5 mt-3">
+    <div class="card mt-5">
         <ul class="list-group list-group-flush">
             <?php
             include 'koneksi.php';

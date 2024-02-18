@@ -5,8 +5,8 @@ include 'layout/header.php';
 
 <main>
 
-    <section class="text-center container">
-        <div class="row py-lg-5">
+    <section class="text-center container p-5">
+        <div class="row py-lg-5 p-5 mt-5">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fw-light">Create Album</h1>
                 <p class="lead text-body-secondary">Buat Album dan kaitkan momen berharga anda kapanpun dan dimanapun hanya dengan Thread Link.</p>

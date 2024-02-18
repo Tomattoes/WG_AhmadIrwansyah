@@ -173,7 +173,7 @@
                 <label for="floatingPassword">Password</label>
             </div>
             <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Sign in</button>
-            <a class="mt-5 mb-3 text-body-secondary" href="sign-up.php">Don't have any account?</a>
+            <a class="mt-5 mb-3 text-body-secondary" href="sign-up1.php">Don't have any account?</a>
             <p class="mt-5 mb-3 text-body-secondary">T-link &copy; 2024</p>
         </form>
     </main>
